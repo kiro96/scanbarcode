@@ -1,0 +1,21 @@
+<app-header titulo="configuración"> </app-header>
+
+<ion-content>
+
+    <ion-button (click)="abrirArchivo($event)" expand="full">
+        Buscar archivo
+    </ion-button>
+
+    <p> Cargar el archivo </p>
+
+    <input type="file" (change)="onFileChange($event)" />
+    <div>
+        {{returnpath}}
+    </div>
+
+    <div id="output"></div>
+    <br>
+    <div *ngIf="willDownload">
+        <a id="download"> Download JSON File </a>
+    </div>
+</ion-content>
